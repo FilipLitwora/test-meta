@@ -1,5 +1,12 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+
+const desc =
+  "Mantle.gg is revolutionizing the Minecraft cape scene, use our free and easy system to access a plethora of awesome capes. Anyone else using Mantle can see it!";
+
+const keyword = "mantle, capes, minecraft";
+const title = "Mantle · Cape Revolution";
+const image = "/assets/profilepic.jpg";
 
 export default function Home() {
   return (
@@ -7,6 +14,13 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="og:type" content="website" />
+        <meta name="desc" content={desc} />
+        <meta name="og:title" content={title} />
+        <meta name="desc" content={desc} />
+        <meta name="keywords" content={keyword} />
+        <meta name="og:desc" content={desc} />
+        <meta name="og:image" content={image} />
       </Head>
 
       <main className={styles.main}>
@@ -14,8 +28,8 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
+        <p className={styles.desc}>
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -56,10 +70,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }
